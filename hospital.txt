@@ -1,0 +1,101 @@
+INSERT INTO hospitals_normalized (
+  id, name, logo, image, address, phone, phoneCode, country, state, city,
+  locationLink, latitude, longitude, zoom_level,
+  entrance_lat, entrance_lng, website, isActive, reank
+) VALUES
+('HSP001', 'Sunrise Multispeciality Hospital', 'logo1.png', 'image.jpg', '123 Health Ave, Sector 45', '+1-555-1234567', '+1',
+ 'USA', 'California', 'Los Angeles', 'https://maps.google.com/?q=34.052235,-118.243683',
+ 34.052235, -118.243683, 15, 34.052000, -118.243500, 'https://www.sunrisehospital.com', TRUE, 5),
+
+('HSP002', 'Global Care Hospital', 'logo1.png', 'image.jpg', '456 Wellness Blvd', '+44-20-7946-0958', '+44',
+ 'UK', 'England', 'London', 'https://maps.google.com/?q=51.507351,-0.127758',
+ 51.507351, -0.127758, 16, 51.507000, -0.127500, 'https://www.globalcare.co.uk', TRUE, 8),
+
+('HSP003', 'City Heart Institute', 'logo1.png', 'image.jpg', '789 Pulse Street', '+91-22-40001234', '+91',
+ 'India', 'Maharashtra', 'Mumbai', 'https://maps.google.com/?q=19.076090,72.877426',
+ 19.076090, 72.877426, 15, 19.076300, 72.877600, 'https://www.cityheart.in', TRUE, 4),
+
+('HSP004', 'Maple Leaf Hospital', 'logo1.png', 'image.jpg', '101 Maple Drive', '+1-416-5551234', '+1',
+ 'Canada', 'Ontario', 'Toronto', 'https://maps.google.com/?q=43.651070,-79.347015',
+ 43.651070, -79.347015, 14, 43.650800, -79.346800, 'https://www.mapleleafhealth.ca', TRUE, 7),
+
+('HSP005', 'Zenith Health Hub', 'logo1.png', 'image.jpg', '88 Recovery Rd', '+61-2-98765432', '+61',
+ 'Australia', 'New South Wales', 'Sydney', 'https://maps.google.com/?q=-33.868820,151.209290',
+ -33.868820, 151.209290, 15, -33.868500, 151.209000, 'https://www.zenithhealth.com.au', TRUE, 6),
+
+('HSP006', 'Tokyo Central Clinic', 'logo1.png', 'image.jpg', '9 Shinjuku Ave', '+81-3-1234-5678', '+81',
+ 'Japan', 'Tokyo', 'Tokyo', 'https://maps.google.com/?q=35.689487,139.691711',
+ 35.689487, 139.691711, 17, 35.689700, 139.691900, 'https://www.tokyoclinic.jp', TRUE, 9),
+
+('HSP007', 'Berlin Medical Center', 'logo1.png', 'image.jpg', '202 Hauptstrasse', '+49-30-123456', '+49',
+ 'Germany', 'Berlin', 'Berlin', 'https://maps.google.com/?q=52.520008,13.404954',
+ 52.520008, 13.404954, 15, 52.519900, 13.404800, 'https://www.berlinmed.de', TRUE, 3),
+
+('HSP008', 'Paris General Hospital', 'logo1.png', 'image.jpg', '14 Rue de Santé', '+33-1-23456789', '+33',
+ 'France', 'Île-de-France', 'Paris', 'https://maps.google.com/?q=48.856613,2.352222',
+ 48.856613, 2.352222, 15, 48.856400, 2.352000, 'https://www.parisgh.fr', TRUE, 6),
+
+('HSP009', 'Cape Town Mediclinic', 'logo1.png', 'image.jpg', '25 Seaview Rd', '+27-21-1234567', '+27',
+ 'South Africa', 'Western Cape', 'Cape Town', 'https://maps.google.com/?q=-33.924870,18.424055',
+ -33.924870, 18.424055, 15, -33.924600, 18.424200, 'https://www.mediclinicct.co.za', TRUE, 4),
+
+('HSP010', 'Rio Vida Hospital', 'logo1.png', 'image.jpg', 'Rua da Vida 302', '+55-21-40028922', '+55',
+ 'Brazil', 'Rio de Janeiro', 'Rio de Janeiro', 'https://maps.google.com/?q=-22.906847,-43.172896',
+ -22.906847, -43.172896, 15, -22.907000, -43.173000, 'https://www.riovidahospital.br', TRUE, 2);
+
+
+
+// ******************************************************************************************************************************
+
+
+INSERT INTO hospital_specialties (hospital_id, specialty, specialistId) VALUES
+-- HSP001 has 4 specialists
+('HSP001', 'Dermatologist', 2),
+('HSP001', 'Oncologist', 8),
+('HSP001', 'Psychiatrist', 9),
+('HSP001', 'ENT Specialist', 10),
+
+-- HSP002 has 2
+('HSP002', 'Pediatrician', 3),
+('HSP002', 'General Practitioner', 6),
+
+-- HSP003 has 3
+('HSP003', 'Neurologist', 4),
+('HSP003', 'Psychiatrist', 9),
+('HSP003', 'Rheumatologist', 12),
+
+-- HSP004 has 2
+('HSP004', 'Orthopedic Surgeon', 5),
+('HSP004', 'Pulmonologist', 13),
+
+-- HSP005 has 1
+('HSP005', 'General Practitioner', 6);
+
+
+
+// ***************************************************************************************************
+
+
+
+INSERT INTO hospital_room_types (
+  hospital_id, room_type, totalBed, availableBed, description, note, pricePerNight, currency
+) VALUES
+('HSP001', 'General Ward', 30, 8, 'Shared room with 6 beds, basic amenities.', 'Wheelchair accessible.', 50.00, 'USD'),
+('HSP001', 'Private Room', 10, 2, 'Single occupancy room with attached bathroom and TV.', 'VIP access available.', 120.00, 'USD'),
+('HSP002', 'ICU', 6, 1, 'Fully equipped intensive care unit with advanced monitoring.', 'Restricted visitor access.', 300.00, 'GBP'),
+('HSP003', 'Semi-Private Room', 20, 5, 'Two beds per room with curtain separation.', 'Ideal for post-surgery care.', 70.00, 'INR'),
+('HSP004', 'Deluxe Suite', 4, 1, 'Luxury suite with private nurse call and meal service.', 'Recommended for long-term stay.', 400.00, 'CAD'),
+('HSP005', 'Maternity Ward', 12, 4, 'Designed for expectant mothers, includes infant crib.', 'Family visits allowed.', 100.00, 'AUD'),
+('HSP006', 'General Ward', 25, 7, 'Standard shared ward for general admissions.', 'Under CCTV surveillance.', 45.00, 'JPY'),
+('HSP007', 'Isolation Room', 5, 1, 'Negative pressure room for infectious cases.', 'Strict PPE protocols.', 220.00, 'EUR'),
+('HSP008', 'Pediatric Room', 8, 3, 'Colorful rooms with toys for child patients.', 'One guardian allowed overnight.', 90.00, 'EUR'),
+('HSP009', 'Burn Unit', 3, 0, 'Specialized care for burn victims.', 'Currently at full capacity.', 350.00, 'ZAR'),
+('HSP004', 'ICU', 6, 1, 'Fully equipped intensive care unit with advanced monitoring.', 'Restricted visitor access.', 300.00, 'GBP'),
+('HSP004', 'Semi-Private Room', 20, 5, 'Two beds per room with curtain separation.', 'Ideal for post-surgery care.', 70.00, 'INR');
+
+
+
+// *****************************************************************************************************************
+
+
+

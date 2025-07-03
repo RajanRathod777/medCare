@@ -1,0 +1,22 @@
+INSERT INTO specialist (image, specialty, isActive)
+VALUES 
+  ('https://example.com/images/doctor1.jpg', 'Cardiologist', TRUE),
+  ('https://example.com/images/doctor2.jpg', 'Dermatologist', FALSE),
+  ('https://example.com/images/doctor3.jpg', 'Pediatrician', TRUE),
+  ('https://example.com/images/doctor4.jpg', 'Neurologist', TRUE),
+  ('https://example.com/images/doctor5.jpg', 'Orthopedic Surgeon', FALSE),
+  ('https://example.com/images/doctor6.jpg', 'General Practitioner', TRUE),
+  ('https://example.com/images/doctor7.jpg', 'Endocrinologist', FALSE),
+  ('https://example.com/images/doctor8.jpg', 'Oncologist', TRUE),
+  ('https://example.com/images/doctor9.jpg', 'Psychiatrist', TRUE),
+  ('https://example.com/images/doctor10.jpg', 'ENT Specialist', FALSE),
+  ('https://example.com/images/doctor11.jpg', 'Ophthalmologist', TRUE),
+  ('https://example.com/images/doctor12.jpg', 'Rheumatologist', FALSE),
+  ('https://example.com/images/doctor13.jpg', 'Pulmonologist', TRUE),
+  ('https://example.com/images/doctor14.jpg', 'Gastroenterologist', TRUE),
+  ('https://example.com/images/doctor15.jpg', 'Nephrologist', FALSE),
+  ('https://example.com/images/doctor16.jpg', 'Urologist', TRUE),
+  ('https://example.com/images/doctor17.jpg', 'Allergist', FALSE),
+  ('https://example.com/images/doctor18.jpg', 'Infectious Disease Specialist', TRUE),
+  ('https://example.com/images/doctor19.jpg', 'Plastic Surgeon', TRUE),
+  ('https://example.com/images/doctor20.jpg', 'Hematologist', FALSE);
