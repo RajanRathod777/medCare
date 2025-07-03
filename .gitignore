@@ -18,3 +18,5 @@ Thumbs.db
 # Optional: Ignore build artifacts (if using TypeScript, Babel, etc.)
 dist/
 build/
+
+*.txt
